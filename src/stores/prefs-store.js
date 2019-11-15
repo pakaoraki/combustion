@@ -7,7 +7,8 @@ export const PrefCookieKeys = {
   sortDirection: 'sort_direction',
   compact: 'compact_display_state',
   skipUpdate: 'skip_update',
-  rpcEndpoint: 'rpc_endpoint'
+  rpcEndpoint: 'rpc_endpoint',
+  themeStyle: 'theme_style'
 };
 
 export const FilterStates = [
@@ -27,19 +28,21 @@ class PrefsStore {
   @observable compact;
   @observable skipUpdate;
   @observable rpcEndpoint;
+  @observable themeStyle;
 
   constructor(init) {
     console.log(init)
     this.rehydrate(init)
   }
 
-  @action rehydrate({ statusFilter = -1, sortCriteria = 'name', sortDirection = 'ascending', compact = false, skipUpdate = false, rpcEndpoint = '/transmission/rpc' } = {}) {
+  @action rehydrate({ statusFilter = -1, sortCriteria = 'name', sortDirection = 'ascending', compact = false, skipUpdate = false, rpcEndpoint = '/transmission/rpc', themeStyle = 'light' } = {}) {
     this.statusFilter = statusFilter;
     this.sortCriteria = sortCriteria;
     this.sortDirection = sortDirection;
     this.compact = compact;
     this.skipUpdate = skipUpdate;
     this.rpcEndpoint = rpcEndpoint
+    this.themeStyle = themeStyle;
   }
 
   @action setStatusFilter(statusFilter) {
@@ -65,6 +68,11 @@ class PrefsStore {
   @action setRPCEndpoint(rpcEndpoint) {
     console.log(rpcEndpoint)
     this.rpcEndpoint = rpcEndpoint
+  }
+
+  @action setTheme(theme) {
+    console.log(theme);
+    this.themeStyle = theme;
   }
 }
 

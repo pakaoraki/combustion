@@ -13,7 +13,7 @@ export default function () {
     sortDirection: rehydrateKey(PrefCookieKeys.sortDirection, 'ascending'),
     compact: rehydrateKey(PrefCookieKeys.compact, false),
     skipUpdate: rehydrateKey(PrefCookieKeys.skipUpdate, false),
-
-    rpcEndpoint: rehydrateKey(PrefCookieKeys.rpcEndpoint, '/transmission/rpc')
+    rpcEndpoint: rehydrateKey(PrefCookieKeys.rpcEndpoint, '/transmission/rpc'),
+    themeStyle: rehydrateKey(PrefCookieKeys.themeStyle, 'light')
   }
 }

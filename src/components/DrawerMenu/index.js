@@ -27,6 +27,10 @@ class DrawerMenu extends Component {
     this.props.prefs_store.setSortDirection(value);
   }
 
+  @autobind onChangeTheme(value) {
+    this.props.prefs_store.setTheme(value);
+  }
+
   @autobind onChangeSearch(search) {
     this.deselectAllTorrents();
     this.props.torrents_store.setTextFilter(search);
@@ -46,6 +50,8 @@ class DrawerMenu extends Component {
     const search = this.props.torrents_store.textFilter;
     const currCriteria = this.props.prefs_store.sortCriteria;
     const currDir = this.props.prefs_store.sortDirection;
+
+    const currTheme = this.props.prefs_store.themeStyle;
 
     const tracker = this.props.torrents_store.trackerFilter;
     const trackers = this.props.torrents_store.trackers.map((domain) => {
@@ -93,6 +99,14 @@ class DrawerMenu extends Component {
           />
           <ListDivider />
           <ListItem caption='Settings' leftIcon={<SettingsIcon />} onClick={this.onTogglePreferences} />
+          <Dropdown
+            auto
+            label='THEME'
+            source={[{value: 'light', label: 'Light'}, {value: 'dark', label: 'Dark'}]}
+            value={currTheme}
+            onChange={this.onChangeTheme}
+            theme={{ inputInput: styles.list_item }}
+          />
         </List>
         <footer styleName='footer'>
           <span>Combustion © 2017</span>
