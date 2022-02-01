@@ -23,6 +23,7 @@ class Files extends Component {
     const torrentId = info.torrents[0].id;
     const tree = generateTree(info.files[0].files);
     const rootKey = Object.keys(tree)[0];
+    var countRow = 0;
 
     return (
       <div>
@@ -34,6 +35,7 @@ class Files extends Component {
           primary
         />
         <FileRow
+          id={countRow}
           name={rootKey}
           node={tree[rootKey]}
           setWanted={({ fileIds, wanted }) =>

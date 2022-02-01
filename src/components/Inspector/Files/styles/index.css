@@ -9,16 +9,29 @@
 .fileRow {
   display: flex;
   align-items: center;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.fileRowColor {
+  background-color: #EEEEEE;
+  width: 100%;
 }
 
 .fileRowContainer {
   width: 100%;
 }
 
+.icons {
+  padding-left: 5px;
+  vertical-align: center;
+}
+
 .name {
   flex: 1;
   padding-left: 5px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 .priorityButton {
