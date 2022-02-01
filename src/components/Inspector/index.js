@@ -53,6 +53,7 @@ class Inspector extends Component {
 
     const info = new TorrentStats(torrents);
     const singleTorrent = torrents.length === 1;
+    const iconsSize = 20;
 
     return (
       <div styleName='inspector'>
@@ -60,7 +61,7 @@ class Inspector extends Component {
           <Button icon={<ChevronRight style={{ verticalAlign: 'baseline' }} />} label='Close Inspector' onMouseUp={this.onToggleInspector} raised primary />
         </div>
         <Tabs index={this.state.index} onChange={this.handleTabChange} fixed>
-          <Tab label='Info' icon={<InfoIcon />}>
+          <Tab label='Info' icon={<InfoIcon size={iconsSize} />}>
             <div>
               <h1>{info.title} {singleTorrent && <IconButton onClick={this.rename} icon={<Edit style={{ verticalAlign: 'baseline' }} />} />}</h1>
               <Activity info={info} />
@@ -71,19 +72,19 @@ class Inspector extends Component {
               />
             </div>
           </Tab>
-          <Tab label='Peers' icon={<PeersIcon />}>
+          <Tab label='Peers' icon={<PeersIcon size={iconsSize} />}>
             <div>
               <h1>{info.title}</h1>
               {info.peers.length > 0 && <Peers info={info} />}
             </div>
           </Tab>
-          <Tab label='Trackers' icon={<TrackersIcon />}>
+          <Tab label='Trackers' icon={<TrackersIcon size={iconsSize} />}>
             <div>
               <h1>{info.title}</h1>
               {info.trackers.length > 0 && <Trackers info={info} />}
             </div>
           </Tab>
-          <Tab label='Files' icon={<FilesIcon />}>
+          <Tab label='Files' icon={<FilesIcon size={iconsSize} />}>
             <div>
               <h1>{info.title}</h1>
               {info.files.length > 0 && <Files info={info} />}
