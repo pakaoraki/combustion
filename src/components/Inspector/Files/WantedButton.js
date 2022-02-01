@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import autobind from 'autobind-decorator';
+/*import Switch from 'react-toolbox/lib/switch';*/
 
 import styles from './styles/index.css';
 
@@ -26,13 +27,17 @@ class WantedButton extends Component {
       })
     );
   }
-
+/*      <Switch
+          id={this.props.fileIds}
+          checked={this.state.checked}
+          onChange={this.onChange}
+        />*/
   render() {
     return (
       <input
-        type='checkbox'
-        onChange={this.onChange}
-        checked={this.state.checked}
+          type='checkbox'
+          onChange={this.onChange}
+          checked={this.state.checked}
       />
     );
   }
