@@ -39,8 +39,16 @@
   border-radius: 5px 0px 0px 5px;
 }
 
+.priorityButton button:first-child.selected {
+  background-image: -webkit-linear-gradient(top, #ffe9c3, white);
+}
+
 .priorityButton button:last-child {
   border-radius: 0px 5px 5px 0px;
+}
+
+.priorityButton button:last-child.selected {
+  background-image: -webkit-linear-gradient(top, #beffca, white);
 }
 
 .verifyLocalDataBtn {
