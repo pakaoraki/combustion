@@ -1,3 +1,4 @@
+/* eslint-disable */
 .row {
  display: flex;
  padding-bottom: 10px;
@@ -11,3 +12,21 @@
  flex: 1;
  margin-bottom: 0;
 }
+
+/* --- Switch --- */
+.text {
+  color: var(--dialog-font);
+}
+
+.off {
+  & .thumb {
+    background-color: var(--dialog-switch-off-thumb);
+  }
+}
+
+.on {
+  & .thumb {
+    background-color: var(--dialog-switch-on-thumb);
+  }
+}
+/* ---------------*/

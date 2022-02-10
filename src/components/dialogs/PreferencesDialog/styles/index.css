@@ -1,5 +1,7 @@
+/* eslint-disable */
 .body {
-  composes: body from "../../Dialog/styles/index.css";
+  composes: bodyGeneral from "../../Dialog/styles/index.css";
+  display: flex;
 }
 
 .content {
@@ -7,4 +9,45 @@
   flex: 1;
   flex-direction: column;
   min-height: 350px;
+  color: var(--dialog-font);
 }
+
+.buttonBlocklist.button.primary {
+   background-color: var(--dialog-button-bg);
+}
+
+/* --- Tabs --- */
+.pointer {
+  background-color: var(--dialog-tab-pointer);
+}
+
+.label {
+  color: var(--dialog-label-font);
+}
+
+.label.active {
+  color: var(--dialog-tab-active);
+}
+/* -------------*/
+
+/* --- input --- */
+.pref__dialog__label {
+  composes: dialog__label from "../../Dialog/styles/index.css";
+}
+
+.pref__dialog__input_element {
+  composes: dialog__input_element from "../../Dialog/styles/index.css";
+}
+
+.pref__dialog__input_bar {
+  composes: dialog__input_bar from "../../Dialog/styles/index.css";
+}
+
+.pref__dialog__input_hint {
+  composes: dialog__input_hint from "../../Dialog/styles/index.css";
+}
+
+.pref__dialog__input_disable {
+  composes: dialog__input_disable from "../../Dialog/styles/index.css";
+}
+/* --------------*/

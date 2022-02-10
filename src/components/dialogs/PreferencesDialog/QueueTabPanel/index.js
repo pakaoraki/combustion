@@ -11,11 +11,13 @@ class NetworkTabPanel extends Component {
     return (
       <div>
         <CheckValueRow
+          theme={this.props.theme}
           idCheck='download-queue-enabled'
           idValue='download-queue-size'
           label='Download Queue Size'
         />
         <CheckValueRow
+          theme={this.props.theme}
           idCheck='queue-stalled-enabled'
           idValue='queue-stalled-minutes'
           label='Consider active torrents as stalled when idle for __ minutes:'

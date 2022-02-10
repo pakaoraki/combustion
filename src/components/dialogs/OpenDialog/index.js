@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react';
 import autobind from 'autobind-decorator';
 import { size } from 'util/formatters';
 
-import Dialog from 'react-toolbox/lib/dialog'
+import Dialog from '../Dialog'
 import Checkbox from 'react-toolbox/lib/checkbox';
 import Input from 'react-toolbox/lib/input';
 
@@ -80,13 +80,22 @@ class OpenDialog extends Component {
       { label: 'Upload', onClick: this.onUpload }
     ]
 
+    const themesInput = {
+      label: styles.open__dialog__label,
+      inputElement: styles.open__dialog__input_element,
+      bar: styles.open__dialog__input_bar,
+      hint: styles.open__dialog__input_hint,
+      disable: styles.open__dialog__input_disable
+    }
+
     return (
       <Dialog
+        theme={styles}
+        show={this.props.view_store.isOpenDialogShown}
+        onHide={this.onHide}
+        header='Upload Torrent Files'
+        type='normal'
         actions={actions}
-        active={this.props.view_store.isOpenDialogShown}
-        onEscKeyDown={this.onHide}
-        onOverlayClick={this.onHide}
-        title='Upload Torrent Files'
       >
         <div styleName='body'>
           <div styleName='form'>
@@ -94,15 +103,27 @@ class OpenDialog extends Component {
               <section>
                 <fieldset>
                   <label>Please select a torrent file to upload:</label>
-                  <input name="files" type="file" multiple="multiple" onChange={this.onChangeFiles} />
-                </fieldset>
-
-                <fieldset>
-                  <Input label='Magnet Link' name="filename" type="url" onChange={this.onChangeUrl} />
+                  <input
+                     name="files"
+                     type="file"
+                     multiple="multiple"
+                     onChange={this.onChangeFiles}
+                  />
                 </fieldset>
 
                 <fieldset>
                   <Input
+                    theme={themesInput}
+                    label='Magnet Link'
+                    name="filename"
+                    type="url"
+                    onChange={this.onChangeUrl}
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <Input
+                    theme={themesInput}
                     label={`Destination folder ${this.renderFreeSpace()}`}
                     name="download-dir"
                     type="text"
@@ -115,6 +136,7 @@ class OpenDialog extends Component {
                 <fieldset>
                   <label styleName='inlineCheck'>
                     <Checkbox
+                      theme={styles}
                       name="paused"
                       checked={this.state.shouldStart}
                       label="Start when added"

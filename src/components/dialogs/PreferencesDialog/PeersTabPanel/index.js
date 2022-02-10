@@ -19,7 +19,7 @@ class PeersTabPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      blocklistSize: (this.props.session_store.blocklistSize == -1) ? '?' : this.props.session_store.blocklistSize,
+      blocklistSize: (this.props.session_store.blocklistSize === -1) ? '?' : this.props.session_store.blocklistSize,
     };
   }
 
@@ -40,8 +40,18 @@ class PeersTabPanel extends Component {
       <div>
         <h3>Connections</h3>
         <div>
-          <TextRow id='peer-limit-per-torrent' label='Max peers per torrent' half />
-          <TextRow id='peer-limit-global' label='Max peers overall' half />
+          <TextRow
+            theme={this.props.theme}
+            id='peer-limit-per-torrent'
+            label='Max peers per torrent'
+            half
+          />
+          <TextRow
+            theme={this.props.theme}
+            id='peer-limit-global'
+            label='Max peers overall'
+            half
+          />
         </div>
 
         <h3>Options</h3>
@@ -52,11 +62,23 @@ class PeersTabPanel extends Component {
         <CheckRow id='lpd-enabled' label='Use LPD to find more peers' title="LPD is a tool for finding peers on your local network."/>
 
         <h3>Blocklist</h3>
-        <CheckValueRow idCheck='blocklist-enabled' idValue='blocklist-url' label='Enable blocklist' type='url'/>
+        <CheckValueRow
+          theme={this.props.theme}
+          idCheck='blocklist-enabled'
+          idValue='blocklist-url'
+          label='Enable blocklist'
+          type='url'
+        />
 
         <div className="row">
           <div className="key" id="blocklist-info">Blocklist has <span id="blocklist-size">{this.state.blocklistSize}</span> rules</div>
-          <Button label='Update blocklist' onMouseUp={this.updateBlocklist} raised primary />
+          <Button
+            label='Update blocklist'
+            onMouseUp={this.updateBlocklist}
+            className={styles.buttonBlocklist}
+            theme={styles}
+            raised
+            primary />
         </div>
       </div>
     );

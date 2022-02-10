@@ -1,6 +1,7 @@
 .body {
   display: flex;
   font-size: 1.1em;
+  color: var(--dialog-font);
 }
 
 .body h2 {
@@ -62,3 +63,44 @@
 .body fieldset label.inlineCheck div {
   margin-left: 6px;
 }
+
+/* --- Input --- */
+.open__dialog__label {
+  composes: dialog__label from "../../Dialog/styles/index.css";
+}
+
+.open__dialog__input_element {
+  composes: dialog__input_element from "../../Dialog/styles/index.css";
+}
+
+.open__dialog__input_bar {
+  composes: dialog__input_bar from "../../Dialog/styles/index.css";
+}
+
+.open__dialog__input_hint {
+  composes: dialog__input_hint from "../../Dialog/styles/index.css";
+}
+
+.open__dialog__input_disable {
+  composes: dialog__input_disable from "../../Dialog/styles/index.css";
+}
+/* --------------*/
+
+/* --- Checkbox --- */
+.text {
+  color: var(--dialog-label-font);
+}
+
+.check {
+  border-color: var(--checkbox-border);
+
+  &.checked {
+    background-color: var(--checkbox-bg);
+    border-color: var(--checkbox-border-checked);
+
+    &::after {
+      border-color: var(--checkbox-check);
+    }
+  }
+}
+/* ---------------- */

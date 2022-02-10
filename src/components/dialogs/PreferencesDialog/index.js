@@ -66,31 +66,39 @@ class PreferencesDialog extends Component {
   }
 
   render() {
+    const themesInput = {
+      label: styles.pref__dialog__label,
+      inputElement: styles.pref__dialog__input_element,
+      bar: styles.pref__dialog__input_bar,
+      hint: styles.pref__dialog__input_hint,
+      disable: styles.pref__dialog__input_disable
+    }
+
     return (
       <Dialog
+        theme={styles}
         show={this.props.view_store.isPreferencesDialogShown}
         onHide={this.onHide}
-        style={{ overflow: 'auto' }}
         header='Preferences'
-        type='large'
+        type='fullscreen'
       >
         <div styleName='body'>
           <div styleName='content' onChange={this.onChange} onBlur={this.onBlur}>
-            <Tabs index={this.state.index} onChange={this.handleTabChange} fixed>
+            <Tabs theme={styles} index={this.state.index} onChange={this.handleTabChange} fixed>
               <Tab label='Torrents'>
-                <TorrentsTabPanel/>
+                <TorrentsTabPanel theme={themesInput} />
               </Tab>
               <Tab label='Speed'>
-                <SpeedTabPanel/>
+                <SpeedTabPanel theme={themesInput} />
               </Tab>
               <Tab label='Peers'>
-                <PeersTabPanel/>
+                <PeersTabPanel theme={themesInput} />
               </Tab>
               <Tab label='Network'>
-                <NetworkTabPanel/>
+                <NetworkTabPanel theme={themesInput} />
               </Tab>
               <Tab label='Queue'>
-                <QueueTabPanel/>
+                <QueueTabPanel theme={themesInput} />
               </Tab>
             </Tabs>
           </div>

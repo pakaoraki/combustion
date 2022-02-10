@@ -45,6 +45,7 @@ class SelectRow extends Component {
     return (
       <div className={cx(styles.row, { [styles.rowThird]: this.props.third })}>
         <Dropdown
+          theme={styles}
           auto
           id={this.props.id}
           className={styles.mdropdown}

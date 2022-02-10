@@ -21,9 +21,14 @@ class TorrentsTabPanel extends Component {
   render() {
     return (
       <div>
-        <TextRow id='download-dir' label='Download to'/>
+        <TextRow
+          theme={this.props.theme}
+          id='download-dir'
+          label='Download to'
+        />
         <CheckRow id='start-added-torrents' label='Start when added'/>
         <CheckValueRow
+          theme={this.props.theme}
           idCheck='incomplete-dir-enabled'
           idValue='incomplete-dir'
           label='Directory for Incomplete Files'
@@ -35,6 +40,7 @@ class TorrentsTabPanel extends Component {
         <CheckValueRow idCheck='seedRatioLimited' idValue='seedRatioLimit' label='Stop seeding at ratio'/>
         <CheckValueRow idCheck='idle-seeding-limit-enabled' idValue='idle-seeding-limit' label='Stop seeding if idle for (min)'/>
         <Input
+          theme={this.props.theme}
           label='RPC endpoint'
           value={this.props.prefs_store.rpcEndpoint}
           onChange={this.setRPCEndpoint}

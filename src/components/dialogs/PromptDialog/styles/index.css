@@ -1,5 +1,5 @@
 .body {
-	composes: body from "../../Dialog/styles/index.css";
+	composes: bodyGeneral from "../../Dialog/styles/index.css";
   flex-direction: row;
 }
 
@@ -8,3 +8,25 @@
   flex-direction: column;
   flex: 1;
 }
+
+/* --- Input --- */
+.prompt__dialog__label {
+  composes: dialog__label from "../../Dialog/styles/index.css";
+}
+
+.prompt__dialog__input_element {
+  composes: dialog__input_element from "../../Dialog/styles/index.css";
+}
+
+.prompt__dialog__input_bar {
+  composes: dialog__input_bar from "../../Dialog/styles/index.css";
+}
+
+.prompt__dialog__input_hint {
+  composes: dialog__input_hint from "../../Dialog/styles/index.css";
+}
+
+.prompt__dialog__input_disable {
+  composes: dialog__input_disable from "../../Dialog/styles/index.css";
+}
+/* --------------*/

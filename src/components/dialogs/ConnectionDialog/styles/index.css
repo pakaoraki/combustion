@@ -1,5 +1,5 @@
 .body {
-  composes: body from "../../Dialog/styles/index.css";
+  composes: bodyGeneral from "../../Dialog/styles/index.css";
   padding: 20px;
 }
 

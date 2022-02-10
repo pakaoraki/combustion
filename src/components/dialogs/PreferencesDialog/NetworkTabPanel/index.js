@@ -14,7 +14,11 @@ class NetworkTabPanel extends Component {
       <div>
         <h3>Listening port</h3>
 
-        <TextRow id='peer-port' label='Peer listening port'/>
+        <TextRow
+          theme={this.props.theme}
+          id='peer-port'
+          label='Peer listening port'
+        />
         <PortTestRow/>
         <CheckRow id='peer-port-random-on-start' label='Randomize port on launch'/>
         <CheckRow id='port-forwarding-enabled' label='Use port forwarding from my router'/>

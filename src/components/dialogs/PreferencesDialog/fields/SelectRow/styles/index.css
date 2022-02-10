@@ -9,8 +9,38 @@
  display: inline-block;
 }
 
+/*----- mdropdown -----*/
 .mdropdown {
   &>div {
     padding-bottom: 0;
+
+    &>label {
+      color: var(--dialog-label-font);
+    }
+
   }
 }
+
+.values {
+  background-color: var(--dropdown-values-bg);
+  border-radius: 10;
+
+  & > * {
+
+    &:hover:not(.disabled) {
+      background-color: var(--dropdown-values-select-bg);
+    }
+
+    &.selected {
+      background-color: var(--dropdown-values-select-bg);
+      color: var(--dropdown-values-select);
+    }
+  }
+}
+
+.value {
+  & > input {
+    color: var(--dialog-font);
+  }
+}
+/*---------------------*/

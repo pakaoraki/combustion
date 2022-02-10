@@ -8,21 +8,31 @@ import MDialog from 'react-toolbox/lib/dialog';
 
 import styles from './styles/index.css';
 
-@inject('view_store')
+/* For some reasons 'dialog' component from react-toolbox doesn't handle my
+'data-theme={theme}' parameter set in App.js, and css variables from
+'theme/styles/index.css' are not set properly. So I made a dirty workaround
+using a second light/dark theme setting test again (line 26) and declare
+new css var in ./styles/index.css.  */
+
+@inject('view_store', 'prefs_store')
 @observer
 @CSSModules(styles)
 class Dialog extends Component {
   render() {
+    const theme = this.props.prefs_store.themeStyle;
+
     return (
       <MDialog
+        styleName={theme === 'dark' ? 'dark' : 'light'}
         actions={this.props.actions}
         active={this.props.show}
         onEscKeyDown={this.props.onHide}
         onOverlayClick={this.props.onHide}
+        theme={styles}
         title={
-          <div>
+          <div className={styles.contentDialog} >
             <Button
-              icon={<Left style={{ lineHeight: 36, verticalAlign: 'baseline' }} />}
+              icon={<Left className={styles.buttonIcon} />}
               label=' '
               theme={{
                 button: styles.button
@@ -32,7 +42,7 @@ class Dialog extends Component {
             {this.props.header}
           </div>
         }
-        type='fullscreen'
+        type={this.props.type}
       >
         {this.props.children}
       </MDialog>

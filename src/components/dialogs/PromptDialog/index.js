@@ -41,19 +41,39 @@ class PromptDialog extends Component {
   }
 
   render() {
+    let actions = [
+      { label: 'Cancel', onClick: this.onHide, className: "snm-close-dialog" },
+      { label: this.props.action || 'Ok',
+         onClick: this.onSubmit,
+         className: 'test',
+         primary: true
+      }
+    ];
+
+    const themesInput = {
+      label: styles.prompt__dialog__label,
+      inputElement: styles.prompt__dialog__input_element,
+      bar: styles.prompt__dialog__input_bar,
+      hint: styles.prompt__dialog__input_hint,
+      disable: styles.prompt__dialog__input_disable
+    }
+
     return (
       <Dialog
         show={this.props.toggle}
         onHide={this.onHide}
         header={this.props.header}
-        actions={[
-          { label: 'Cancel', onClick: this.onHide },
-          { label: this.props.action || 'Ok', onClick: this.onSubmit, primary: true }
-        ]}
+        actions={actions}
+        type='fullscreen'
       >
         <div styleName='body'>
           <div styleName='content'>
-            <Input type='text' label={this.props.question && this.props.question} onChange={this.onChange} value={this.state.value} />
+            <Input type='text'
+              theme={themesInput}
+              label={this.props.question && this.props.question}
+              onChange={this.onChange}
+              value={this.state.value}
+            />
           </div>
         </div>
       </Dialog>

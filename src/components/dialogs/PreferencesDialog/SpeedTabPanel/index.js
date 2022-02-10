@@ -21,16 +21,37 @@ class SpeedTabPanel extends Component {
       <div>
         <h3>Speed Limits</h3>
         <div>
-          <CheckValueRow idCheck='speed-limit-up-enabled' idValue='speed-limit-up' label='Upload (kB/s)' half />
-          <CheckValueRow idCheck='speed-limit-down-enabled' idValue='speed-limit-down' label='Download (kB/s)' half />
+          <CheckValueRow
+            theme={this.props.theme}
+            idCheck='speed-limit-up-enabled'
+            idValue='speed-limit-up'
+            label='Upload (kB/s)' half
+          />
+          <CheckValueRow
+            theme={this.props.theme}
+            idCheck='speed-limit-down-enabled'
+            idValue='speed-limit-down'
+            label='Download (kB/s)'
+            half
+          />
         </div>
 
         <h3>Alternative Speed Limits</h3>
         <p>Override normal speed limits manually or at scheduled times</p>
 
         <div>
-          <TextRow id='alt-speed-up' label='Upload (kB/s)' half />
-          <TextRow id='alt-speed-down' label='Download (kB/s)' half />
+          <TextRow
+            theme={this.props.theme}
+            id='alt-speed-up'
+            label='Upload (kB/s)'
+            half
+          />
+          <TextRow
+            theme={this.props.theme}
+            id='alt-speed-down'
+            label='Download (kB/s)'
+            half 
+          />
         </div>
 
         <CheckRow id='alt-speed-time-enabled' label='Scheduled Times' />

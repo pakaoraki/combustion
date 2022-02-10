@@ -34,6 +34,7 @@ class TextRow extends Component {
     return (
       <div className={cx(styles.row, { [styles.rowHalf]: this.props.half })}>
         <Input
+          theme={this.props.theme}
           label={this.props.label}
           id={this.props.id}
           type="text"

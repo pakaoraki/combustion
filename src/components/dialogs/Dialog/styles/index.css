@@ -1,5 +1,91 @@
+/* eslint-disable */
+/*
+ -Theme colors:
+ -Dark #242430
+ -Blueish #414564
+ -Base #363746
+ -lighter Base: #757890
+ -Light Grey #A9AABC
+ -Lighter Grey #D4D5DE
+*/
+.light {
+  --dialog-bg: white;
+  --dialog-font: black;
+  --dialog-label-font: #bdbdbd;
+  --dialog-tab-active: black;
+  --dialog-tab-pointer: black;
+  --dialog-switch-on-thumb: black;
+  --dialog-switch-off-thumb: white;
+  --dialog-button-bg: black;
+
+  /* Input (Footer -> search)*/
+  --input-text-disable-text-color: #bdbdbd;
+  --input-label: #bdbdbd;
+  --input-bar: black;
+  --input-icon: #bdbdbd;
+  --input-focus: black;
+  --input-value: black;
+
+  --dropdown-values-bg: white;
+  --dropdown-values-select: black;
+  --dropdown-values-select-bg: #eeeeee;
+
+  --checkbox-border: black;
+  --checkbox-border-checked: black;
+  --checkbox-bg: black;
+  --checkbox-check: white;
+}
+
+.dark {
+  --dialog-bg: #363746;
+  --dialog-font: #D4D5DE;
+  --dialog-label-font: #A9AABC;
+  --dialog-tab-active: white;
+  --dialog-tab-pointer: #414564;
+  --dialog-switch-on-thumb: #D4D5DE;
+  --dialog-switch-off-thumb: #414564;
+  --dialog-button-bg: #242430;
+
+  /* Input (Footer -> search)*/
+  --input-text-disable-text-color: #242430;
+  --input-label: #A9AABC;
+  --input-bar: #414564;
+  --input-icon: #D4D5DE;
+  --input-focus: white;
+  --input-value: white;
+
+  --dropdown-values-bg: #414564;
+  --dropdown-values-select: white;
+  --dropdown-values-select-bg: #828492;
+
+  --checkbox-border: white;
+  --checkbox-border-checked: #414564;
+  --checkbox-bg: #414564;
+  --checkbox-check: white;
+}
+
+/*
 .body {
   display: flex;
+}*/
+.bodyGeneral {
+  display: flex;
+}
+
+.contentDialog {
+  color: var(--dialog-font);
+}
+
+/* Dialog color settings
+div[data-react-toolbox=dialog] > section{
+   background-color: var(--dialog-bg);
+}*/
+.dark.dialog, .light.dialog {
+    background-color: var(--dialog-bg);
+
+    &>button.primary {
+      color: red;
+    }
 }
 
 .body h2 {
@@ -9,7 +95,49 @@
   margin-right: 6px;
   min-width: 0;
 
+  &>[data-react-toolbox="ripple"] {
+    color: var(--dialog-tab-active);
+  }
+
   &>[data-react-toolbox="font-icon"] {
     margin-right: 0;
   }
 }
+
+.buttonIcon {
+  line-height: 36;
+  vertical-align: baseline;
+  color: var(--dialog-font);
+}
+
+/* ---- Dialog Input ---- */
+.dialog__label {
+  color: var(--input-label);
+}
+
+.dialog__input_element {
+  color: var(--input-value);
+
+  &:focus:not([disabled]):not([readonly]) {
+
+    & ~ .dialog__label:not(.fixed) {
+      color: var(--input-focus);
+    }
+  }
+}
+
+.dialog__input_bar {
+  &::before,
+  &::after {
+    background-color: var(--input-bar);
+  }
+}
+
+.dialog__input_hint {
+  color: red;
+}
+
+.dialog__input_disable > .inputElement {
+  color: var(--input-text-disable-text-color);
+}
+/* ---------------------- */

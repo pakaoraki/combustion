@@ -22,6 +22,7 @@ class CheckRow extends Component {
     return (
       <div styleName='row'>
         <Switch
+          theme={styles}
           label={this.props.label}
           id={this.props.id}
           title={this.props.title}

@@ -33,6 +33,7 @@ class CheckValueRow extends Component {
       <div className={cx(styles.row, { [styles.rowHalf]: this.props.half })}>
         <div styleName='key'>
           <Switch
+            theme={styles}
             id={this.props.idCheck}
             className={styles.mswitch}
             checked={this.state.check}
@@ -41,9 +42,10 @@ class CheckValueRow extends Component {
         </div>
         <div styleName='value'>
           <Input
+            styleName='minput'
+            theme={this.props.theme}
             type={type}
             min='0'
-            className={styles.minput}
             label={this.props.label}
             id={this.props.idValue}
             value={this.state.value}
