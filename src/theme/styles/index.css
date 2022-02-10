@@ -1,0 +1,160 @@
+/* eslint-disable */
+[data-theme='light'] {
+  /* App */
+  --color-central: white;
+
+  /* Footer */
+  --color-footer-bg: #E0E0E0;
+  --color-footer-search-bg: white;
+  --color-footer-font: black;
+  --color-footer-hover: white;
+
+  /* Header */
+  --color-header-bg: black;
+  --color-header-bg--accent: #4E342E;
+
+  /* Inspector */
+  --color-inspector-pointer: black;
+  --color-inspector-tab: black;
+  --color-inspector-tab-active: black;
+  --color-inspector-peer-bg: #EEEEEE;
+  --color-inspector-row: #EEEEEE;
+  --color-inspector-row-alt: white;
+  --color-inspector-tracker-font: #666;
+  --color-inspector-tracker-fontUrl: #222;
+  --color-inspector-button: black;
+  --color-inspector-icon: black;
+
+  /* SelectableList */
+  --color-selectable-main: black;
+  --color-selectable-bg: white;
+  --color-selectable-select: #E0E0E0;
+  --color-selectable-border: #cecece;
+
+  /* DrawerMenu */
+  --color-drawer-bg: white;
+  --color-drawer-footer: #e0e0e0;
+  --color-drawer-font: black;
+  --color-drawer-font2: #56144D;
+
+  /* Dialogs */
+  --color-dialog-bg: white;
+  --color-dialog-font: black;
+
+  /* NavDrawer */
+  --color-nav-drawer-label-font: #cacaca;
+  --color-nav-drawer-title-font: black;
+  --color-nav-drawer-title-item-font: black;
+  --color-nav-drawer-font: black;
+  --color-nav-drawer-input-disable-font: black;
+  --color-nav-drawer-input-bar: black;
+  --color-nav-drawer-dropdown-select-bg: #e0e0e0;
+  --color-nav-drawer-dropdown-values-bg: white;
+  --color-nav-drawer-hover-bg: #eeeeee;
+  --color-nav-drawer-icon: #757575;
+
+  /* Menu */
+  --color-menu-font: black;
+  --color-menu-bg: white;
+  --color-menu-hover-bg: #eeeeee;
+  --color-menu-ripple: black;
+
+  /* Input (Footer -> search)*/
+  --color-input-label: #bdbdbd;
+  --color-input-cross: #BFBFBF;
+  --color-input-icon: #bdbdbd;
+  --color-input-focus: black;
+  --color-input-value: black;
+
+  /* Torrent */
+  --color-torrent-bg: #EEEEEE;
+
+  /* Aside */
+  --color-aside-bg: white;
+  --color-aside-font: black;
+}
+
+[data-theme='dark'] {
+  /*
+   -Theme colors:
+   -Dark #242430
+   -Blueish #414564
+   -Base #363746
+   -lighter Base: #757890
+   -Light Grey #A9AABC
+   -Lighter Grey #D4D5DE
+  */
+  /* App */
+  --color-central: #363746;
+
+  /* Footer */
+  --color-footer-bg: #242430;
+  --color-footer-search-bg: #414564;
+  --color-footer-font: white;
+  --color-footer-hover: #757890;
+
+  /* Header */
+  --color-header-bg: black; /* previous #242430 */
+  --color-header-bg--accent: #242430;
+
+  /* Inspector */
+  --color-inspector-pointer: #242430; /* previous #414564 */
+  --color-inspector-tab: #A9AABC;
+  --color-inspector-tab-active: white;
+  --color-inspector-peer-bg: #363746;
+  --color-inspector-row: #363746;
+  --color-inspector-row-alt: #242430;
+  --color-inspector-tracker-font: white;
+  --color-inspector-tracker-fontUrl: #A9AABC;
+  --color-inspector-button: #242430;
+  --color-inspector-icon: #D4D5DE;
+
+  /* SelectableList */
+  --color-selectable-main: #D4D5DE;
+  --color-selectable-bg: #363746;
+  --color-selectable-select: #414564;
+  --color-selectable-border: #414564;
+
+  /* DrawerMenu */
+  --color-drawer-bg: #363746;
+  --color-drawer-footer: #414564;
+  --color-drawer-font: white;
+  --color-drawer-font2: #A9AABC;
+
+  /* Dialogs */
+  --color-dialog-bg: #363746;
+
+  /* NavDrawer */
+  --color-nav-drawer-label-font: #D4D5DE;
+  --color-nav-drawer-title-font: #D4D5DE;
+  --color-nav-drawer-title-item-font: #757890;
+  --color-nav-drawer-font: white;
+  --color-nav-drawer-input-disable-font: white;
+  --color-nav-drawer-input-bar: #414564;
+  --color-nav-drawer-dropdown-select-bg: #A9AABC;
+  --color-nav-drawer-dropdown-values-bg: #414564;
+  --color-nav-drawer-hover-bg: #757890; /*414564*/
+  --color-nav-drawer-icon: #a9aabc;
+
+  /* Menu */
+  --color-menu-font: #D4D5DE;
+  --color-menu-bg: #363746;
+  --color-menu-hover-bg: #757890;
+  --color-menu-ripple: white;
+
+  /* Input (Footer -> search)*/
+  --color-input-label: #A9AABC;
+  --color-input-cross: #D4D5DE;
+  --color-input-icon: #D4D5DE;
+  --color-input-focus: white;
+  --color-input-value: white;
+
+  /* Torrent */
+  --color-torrent-bg: #242430;
+  --color-torrent-font: white;
+
+  /* Aside */
+  --color-aside-bg: #414564;
+  --color-aside-font: white;
+
+}
