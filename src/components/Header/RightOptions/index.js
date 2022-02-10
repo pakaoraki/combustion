@@ -29,18 +29,23 @@ export default class RightOptions extends React.Component {
         <IconButton title='Open Options' onClick={this.onActive}>
           <MoreIcon styleName='rightOptions' />
         </IconButton>
-        <Menu position='auto' active={this.state.isActive} onHide={this.onHide}>
-          <MenuItem onClick={this.onFilter}>
+        <Menu theme={styles} position='auto' active={this.state.isActive} onHide={this.onHide}>
+          <MenuItem theme={styles} onClick={this.onFilter}>
             Filter
             <RightIcon className={styles.rightIcon} />
           </MenuItem>
-          <MenuItem onClick={this.onSort}>
+          <MenuItem theme={styles} onClick={this.onSort}>
             Sort
             <RightIcon className={styles.rightIcon} />
           </MenuItem>
         </Menu>
-        <Menu position='auto' active={this.state.isFilter} onHide={this.onHideFilter}>
-          <FilterToolbar onAnySelected={this.onHideFilter} />
+        <Menu
+          theme={styles}
+          position='auto'
+          active={this.state.isFilter}
+          onHide={this.onHideFilter}
+          >
+            <FilterToolbar onAnySelected={this.onHideFilter} />
         </Menu>
         <SortByContextMenu position='auto' active={this.state.isSort} onHide={this.onHideSort} />
       </div>

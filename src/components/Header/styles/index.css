@@ -1,10 +1,6 @@
-:root {
-  --color-bg: black;
-  --color-bg--accent: #4E342E;
-}
-
+/* eslint-disable */
 .header {
-  background-color: var(--color-bg);
+  background-color: var(--color-header-bg);
   left: 0;
   position: fixed;
   right: 0;
@@ -14,7 +10,7 @@
 }
 
 .header--accent {
-  background-color: var(--color-bg--accent);
+  background-color: var(--color-header-bg--accent);
 }
 
 .header__inner {
