@@ -1,23 +1,134 @@
+/* eslint-disable */
 .drawer {
   display: flex;
   flex-direction: column;
   flex: 1;
+  color: var(--color-drawer-font);
+  background-color: var(--color-drawer-bg);
 }
 
 .aside {
   flex: 1;
+  background-color: var(--color-drawer-bg);
+}
+/*
+.list_item {
+  margin-left: 16px;
+  padding-right: 16px;
+}*/
+
+.footer {
+  background-color: var(--color-drawer-bg);
+  padding: 15px;
+  border-top: 1px solid var(--color-drawer-footer);
+  font-size: 0.75rem;
+  &>span {
+    display: block;
+  }
+
+}
+
+.footer a {
+  color: var(--color-drawer-font2);
+}
+
+.settings {
+  & .itemText {
+    color: var(--color-nav-drawer-title-font);
+  }
+
+  & .item {
+    &.selectable:not(.disabled):hover {
+      background-color: var(--color-nav-drawer-hover-bg);
+    }
+  }
+}
+
+.icon {
+  color: var(--color-nav-drawer-icon);
+}
+
+.statusFilter {
+  color: var(--color-nav-drawer-title-item-font);
+  font-weight: bold;
+}
+
+/* Divider */
+.divider {
+  background-color: var(--color-drawer-footer);
+}
+
+/* --- input --- */
+.drawer__search__label {
+  color: var(--color-nav-drawer-input-label-font);
+}
+
+.drawer__search__input_element {
+  color: var(--color-nav-drawer-input-font);
+
+  &:focus:not([disabled]):not([readonly]) {
+
+    & ~ .drawer__search__label:not(.fixed) {
+      color: var(--color-nav-drawer-input-font);
+    }
+  }
+}
+
+.drawer__search__input_bar {
+  &::before,
+  &::after {
+    background-color: var(--color-nav-drawer-input-bar);
+  }
+}
+
+.drawer__search__input_hint {
+  color: red;
+}
+
+.drawer__search__input_disable > .inputElement {
+  color: var(--color-nav-drawer-input-disable-font);
 }
 
 .list_item {
   margin-left: 16px;
   padding-right: 16px;
 }
+/* --------------*/
 
-.footer {
-  padding: 15px;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.75rem;
-  &>span {
-    display: block;
+/*----- mdropdown -----*/
+.mdropdown {
+  margin-left: 16px;
+  padding-right: 16px;
+
+  &>div {
+
+    &>label {
+      color: var(--color-nav-drawer-label-font);
+    }
+
   }
 }
+
+.values {
+  background-color: var(--color-nav-drawer-dropdown-values-bg);
+
+  & > * {
+
+    &:hover:not(.disabled) {
+      background-color: var(--color-nav-drawer-dropdown-select-bg);
+    }
+
+    &.selected {
+      background-color: var(--color-nav-drawer-dropdown-select-bg);
+      color: var(--color-nav-drawer-font);
+    }
+  }
+}
+
+.value {
+  & > input {
+    color: var(--color-nav-drawer-font);
+
+  }
+}
+/*---------------------*/

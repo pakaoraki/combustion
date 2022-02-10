@@ -45,7 +45,7 @@ class DrawerMenu extends Component {
     this.props.torrents_store.setTrackerFilter(value);
   }
 
-
+/* theme={{ inputInput: styles.list_item }} */
   render() {
     const search = this.props.torrents_store.textFilter;
     const currCriteria = this.props.prefs_store.sortCriteria;
@@ -60,6 +60,14 @@ class DrawerMenu extends Component {
       return {value: domain, label};
     });
 
+    const themesInput = {
+      label: styles.drawer__search__label,
+      inputElement: styles.drawer__search__input_element,
+      bar: styles.drawer__search__input_bar,
+      hint: styles.drawer__search__input_hint,
+      disable: styles.drawer__search__input_disable
+    }
+
     return (
       <aside styleName='drawer'>
         <List styleName='aside' selectable ripple>
@@ -67,9 +75,10 @@ class DrawerMenu extends Component {
             type='text'
             label='Search'
             name='search'
-            styleName='list_item'
+            className={styles.list_item}
             value={search}
             onChange={this.onChangeSearch}
+            theme={themesInput}
           />
           <Dropdown
             auto
@@ -77,7 +86,8 @@ class DrawerMenu extends Component {
             source={sortCriteria}
             value={currCriteria}
             onChange={this.onChangeSort}
-            theme={{ inputInput: styles.list_item }}
+            theme={styles}
+            className={styles.mdropdown}
           />
           <Dropdown
             auto
@@ -85,27 +95,48 @@ class DrawerMenu extends Component {
             source={[{value: 'ascending', label: 'Ascending'}, {value: 'descending', label: 'Descending'}]}
             value={currDir}
             onChange={this.onChangeSortDir}
-            theme={{ inputInput: styles.list_item }}
+            theme={styles}
+            className={styles.mdropdown}
           />
-          <ListSubHeader caption='Filter by Status' />
+          <ListSubHeader
+            caption='Filter by Status'
+            theme={styles}
+            className={styles.statusFilter}
+          />
           <FilterToolbar />
+          <ListSubHeader
+            caption='Filter by Tracker'
+            theme={styles}
+            className={styles.statusFilter}
+          />
           <Dropdown
             auto
-            label='Filter by Tracker'
+            label='Tracker'
             source={[{value: '', label: 'All'}, ...trackers]}
             value={tracker}
             onChange={this.onChangeFilterTracker}
-            theme={{ inputInput: styles.list_item }}
+            theme={styles}
+            className={styles.mdropdown}
           />
-          <ListDivider />
-          <ListItem caption='Settings' leftIcon={<SettingsIcon />} onClick={this.onTogglePreferences} />
+          <ListDivider theme={styles} />
           <Dropdown
             auto
             label='THEME'
-            source={[{value: 'light', label: 'Light'}, {value: 'dark', label: 'Dark'}]}
+            source={[
+              {value: 'light', label: 'Light'},
+              {value: 'dark', label: 'Dark'}
+            ]}
             value={currTheme}
             onChange={this.onChangeTheme}
-            theme={{ inputInput: styles.list_item }}
+            theme={styles}
+            className={styles.mdropdown}
+          />
+          <ListItem
+            caption='Settings'
+            leftIcon={<SettingsIcon className={styles.icon}/>}
+            onClick={this.onTogglePreferences}
+            theme={styles}
+            className={styles.settings}
           />
         </List>
         <footer styleName='footer'>
