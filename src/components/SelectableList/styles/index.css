@@ -1,9 +1,6 @@
-:root {
-  --main-color: black;
-}
-
+/* eslint-disable */
 .list {
-  background-color: white;
+  background-color: var(--color-selectable-bg);
   margin: 0;
   padding: 0;
   text-align: left;
@@ -16,11 +13,11 @@
   align-items: center;
   cursor: pointer;
   outline: none;
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid var(--color-selectable-border);
 }
 
 .listItem {
-  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
   display: flex;
   flex-direction: row;
   outline: none;
@@ -31,11 +28,11 @@
 }
 
 .selected {
-  background-color: #E0E0E0;
+  background-color: var(--color-selectable-select);
 }
 
 .rippleActive {
-  background-color: var(--main-color);
+  background-color: var(--color-selectable-main);
 }
 
 .radioButton {
@@ -50,12 +47,12 @@
 }
 
 .radioButton [data-react-toolbox="radio"] {
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--color-selectable-main);
   &::before {
-    background-color: var(--main-color);
+    background-color: var(--color-selectable-main);
   }
 }
 
 .radioButton [data-react-toolbox="ripple"] span {
-  background-color: var(--main-color);
+  background-color: var(--color-selectable-main);
 }
