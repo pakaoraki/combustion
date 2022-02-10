@@ -4,3 +4,25 @@
 .torrentMenuSelected {
   font-weight: 600;
 }
+
+/* --- Menu --- */
+.menuItem {
+  color: var(--color-menu-font);
+
+  &:not(.disabled):hover {
+    background-color: var(--color-menu-hover-bg);
+  }
+
+  & .ripple {
+    color: var(--color-menu-ripple);
+  }
+}
+
+.outline {
+  background-color: var(--color-menu-bg);
+}
+
+.menuDivider {
+  background-color: var(--color-menu-font);
+}
+/* ------------ */

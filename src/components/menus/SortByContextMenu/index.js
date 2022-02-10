@@ -23,21 +23,24 @@ class SortByContextMenu extends Component {
 
     return (
       <Menu
-      selectable
+        theme={styles}
+        selectable
         position='auto'
         active={this.props.active}
         onHide={this.props.onHide}
       >
         {Object.keys(criteriaList).map((key) => (
           <MenuItem
+            theme={styles}
             key={key}
             caption={criteriaList[key]}
             onClick={this.onSetSortCriteria.bind(this, key)}
             styleName={sortCriteria === key ? 'torrentMenuSelected' : 'torrentMenuItem'}
           />
         ))}
-        <MenuDivider/>
+        <MenuDivider theme={styles} />
         <MenuItem
+          theme={styles}
           selected={true}
           caption='Reverse Sort Order'
           onClick={this.onSetSortReverse.bind(this, sortDirection)}
