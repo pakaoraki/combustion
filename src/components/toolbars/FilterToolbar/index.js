@@ -37,11 +37,8 @@ class FilterToolbar extends Component {
             key={state.value}
             value={state.value}
             caption={state.label}
-            theme={{ caption:
-                      (+state.value === status)
-                        ? styles.menuSelected
-                        : undefined
-            }}
+            styleName={state.value === status ? 'filterMenuSelected' : 'filtertMenuItem'}
+            theme={styles}
             onClick={this.onClickFilterState(state.value)}
           >
             <Badge>{state.count}</Badge>
