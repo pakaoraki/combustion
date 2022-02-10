@@ -54,16 +54,26 @@ class Inspector extends Component {
     const info = new TorrentStats(torrents);
     const singleTorrent = torrents.length === 1;
     const iconsSize = 20;
+    const iconEdit = <Edit className={styles.iconEdit} />;
 
     return (
       <div styleName='inspector'>
         <div styleName='inspectorCloseButton'>
-          <Button icon={<ChevronRight style={{ verticalAlign: 'baseline' }} />} label='Close Inspector' onMouseUp={this.onToggleInspector} raised primary />
+          <Button
+            styleName='inspectorCloseButton'
+            theme={styles}
+            icon={<ChevronRight
+              style={{ verticalAlign: 'baseline' }}
+            />}
+            label='Close Inspector'
+            onMouseUp={this.onToggleInspector}
+            raised primary
+          />
         </div>
-        <Tabs index={this.state.index} onChange={this.handleTabChange} fixed>
-          <Tab label='Info' icon={<InfoIcon size={iconsSize} />}>
+        <Tabs theme={styles} index={this.state.index} onChange={this.handleTabChange} fixed>
+          <Tab theme={styles} label='Info' icon={<InfoIcon size={iconsSize} />}>
             <div>
-              <h1>{info.title} {singleTorrent && <IconButton onClick={this.rename} icon={<Edit style={{ verticalAlign: 'baseline' }} />} />}</h1>
+              <h1>{info.title} {singleTorrent && <IconButton onClick={this.rename} icon={iconEdit} />}</h1>
               <Activity info={info} />
               <Details
                 info={info}
@@ -72,13 +82,13 @@ class Inspector extends Component {
               />
             </div>
           </Tab>
-          <Tab label='Peers' icon={<PeersIcon size={iconsSize} />}>
+          <Tab theme={styles} label='Peers' icon={<PeersIcon size={iconsSize} />}>
             <div>
               <h1>{info.title}</h1>
               {info.peers.length > 0 && <Peers info={info} />}
             </div>
           </Tab>
-          <Tab label='Trackers' icon={<TrackersIcon size={iconsSize} />}>
+          <Tab theme={styles} label='Trackers' icon={<TrackersIcon size={iconsSize} />}>
             <div>
               <h1>{info.title}</h1>
               {info.trackers.length > 0 && <Trackers info={info} />}

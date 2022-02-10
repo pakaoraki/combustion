@@ -24,6 +24,7 @@ class Peers extends Component {
       <div>
         <Button
           styleName='morePeersBtn'
+          theme={styles}
           label='Ask tracker for more peers'
           onMouseUp={this.askTrackerMorePeers}
           raised

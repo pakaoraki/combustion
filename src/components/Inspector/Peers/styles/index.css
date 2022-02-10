@@ -1,10 +1,16 @@
+/* eslint-disable */
 .peerList {
   width: 100%;
   border-collapse: collapse;
+  background-color: var(--color-inspector-row-alt);
 }
 
 .peerRow:nth-child(even) {
-  background-color: #EEEEEE;
+  background-color: var(--color-inspector-row-alt);
+}
+
+.peerRow:nth-child(odd) {
+  background-color: var(--color-inspector-row);
 }
 
 .encryptedCol {
@@ -42,4 +48,8 @@
 
 .morePeersBtn {
   margin-bottom: 10px;
+}
+
+.morePeersBtn.button.primary {
+  background-color: var(--color-inspector-button);
 }

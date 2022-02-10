@@ -6,8 +6,6 @@ import FileRow from './FileRow';
 import styles from './styles/index.css';
 
 function FileList({ lastId, entries, setPriority, setWanted }) {
-  const nbEntries = Object.keys(entries).length;
-  var i = 1;
 
   return (
     <ul styleName='fileList'>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 .trackerList {
   list-style: none;
   padding: 0px;
@@ -15,7 +16,7 @@
 }
 
 .tierRow:nth-child(even) {
-  background-color: #EEEEEE;
+  background-color: var(--color-inspector-row);
 }
 
 .trackerInfo {
@@ -24,7 +25,7 @@
 }
 
 .trackerActivity {
-  color: #666;
+  color: var(--color-inspector-tracker-font);
 }
 
 .trackerActivityRow {
@@ -35,17 +36,21 @@
 .trackerHost {
   font-size: 1.2em;
   font-weight: bold;
-  color: #222;
+  color: var(--color-inspector-tracker-fontUrl);
 }
 
+.trackerTier:nth-child(even) {
+  background-color: var(--color-central);
+}
 .trackerTier {
   margin: 0;
   padding: 2px;
-  background-color: white;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .trackerStats {
-  color: #666;
+  color: var(--color-inspector-tracker-font);
   width: 150px;
   margin: 0;
   padding-right: 3px;

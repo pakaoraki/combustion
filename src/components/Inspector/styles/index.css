@@ -1,16 +1,26 @@
+/* eslint-disable */
 .inspector {
   text-align: left;
   padding: 15px;
 }
 
-.inspectorCloseButton {
+div.inspectorCloseButton {
   text-align: right;
+}
+
+.inspectorCloseButton.button.primary {
+   background-color: var(--color-inspector-button);
 }
 
 .inspector h1 {
   font-weight: bold;
   font-size: large;
   word-wrap: break-word;
+}
+
+.iconEdit {
+  vertical-align: baseline;
+  color: var(--color-inspector-icon);
 }
 
 /* Row */
@@ -26,3 +36,21 @@
 .value {
  flex: 1;
 }
+
+/* --- Tabs --- */
+.pointer {
+  background-color: var(--color-inspector-pointer);
+}
+
+.pointer.disabled {
+  background-color: red;
+}
+
+.label {
+  color: var(--color-inspector-tab);
+}
+
+.label.active, .icon.active {
+  color: var(--color-inspector-tab-active);
+}
+/* -------------*/

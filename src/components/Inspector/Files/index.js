@@ -29,6 +29,7 @@ class Files extends Component {
       <div>
         <Button
           styleName='verifyLocalDataBtn'
+          theme={styles}
           label='Verify Local Data'
           onMouseUp={this.verify}
           raised

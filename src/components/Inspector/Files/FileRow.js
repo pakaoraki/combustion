@@ -1,8 +1,6 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 
-import { Tab, Tabs } from 'react-toolbox/lib/tabs';
-
 import FileList from './FileList';
 import PriorityButton from './PriorityButton';
 import WantedButton from './WantedButton';
@@ -19,20 +17,20 @@ function FileRow({ id, name, node, setPriority, setWanted }) {
   const folder = Object.keys(entries).length === 0
                 ? <FilesIcon size={iconsSize} />
                 : <FolderIcon size={iconsSize} />;
-  id = id + 1;
+  id+=1;
 
             /*<div styleName='icons'>{folder}</div>
             <div styleName='name'>{id}:{name}</div>*/
 
   return (
     <div styleName='fileRowContainer'>
-      <div styleName ={ id % 2 ? 'fileRowColor' : null }>
+      <div styleName={ id % 2 ? 'fileRowColor' : null }>
         <div styleName='fileRow'>
           <WantedButton
             wanted={wanted}
             fileIds={fileIds}
             setWanted={setWanted}
-          />          
+          />
           <div styleName='icons'>{folder}</div>
           <div styleName='name'>{name}</div>
 

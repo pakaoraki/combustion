@@ -6,12 +6,14 @@ import Edit from 'react-icons/lib/md/edit';
 import styles from './styles/index.css';
 
 function ActivityRow({ label, value, actionable, action }) {
+  const iconEdit = <Edit className={styles.iconEdit} />;
+  
   return (
     <div styleName='row'>
       <div styleName='key'>{label}:</div>
       <div styleName='value'>
         {value}
-        {actionable && <IconButton onClick={action} icon={<Edit />} />}
+        {actionable && <IconButton onClick={action} icon={iconEdit} />}
       </div>
     </div>
   );
