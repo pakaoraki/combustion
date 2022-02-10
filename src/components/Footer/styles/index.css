@@ -1,3 +1,4 @@
+/* eslint-disable */
 .footer {
   position: fixed;
   bottom: 0;
@@ -15,6 +16,7 @@
   min-height: 0;
   transition: max-height 0.25s cubic-bezier(.4,0,.2,1);
   transition: min-height 0.25s cubic-bezier(.4,0,.2,1);
+  background-color: var(--color-footer-search-bg);
 }
 
 .header__search--show {
@@ -29,6 +31,14 @@
 
 .header__search__input_element {
   border: 0;
+  color: var(--color-input-value);
+
+  &:focus:not([disabled]):not([readonly]) {
+
+    & ~ .header__search__input_icon {
+      color: var(--color-input-focus);
+    }
+  }
 }
 
 .header__search__input_bar {
@@ -37,24 +47,26 @@
 
 .header__search__input_hint {
   top: 20px;
+  color: var(--color-input-label);
 }
 
 .header__search__input_icon {
   line-height: 20px !important;
+  color: var(--color-input-icon);
 }
 
 .header__search_cross {
   margin-top: 8px;
   &>svg {
     align-items: center;
-    color: #BFBFBF;
+    color: var(--color-input-cross);
     font-size: 24px;
   }
 }
 
 .toolbar {
-  background-color: #E0E0E0;
-  color: white;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-font);
   height: 35px;
   padding: 5px;
 
@@ -74,7 +86,7 @@
 
   &>svg {
     background: transparent;
-    color: black;
+    color: var(--color-footer-font);
     height: 20px;
     margin: 5px auto;
     outline: none;
@@ -84,7 +96,7 @@
 
 .button:hover {
   cursor: pointer;
-  background: white;
+  background: var(--color-footer-hover);
 }
 
 .buttonActive {
