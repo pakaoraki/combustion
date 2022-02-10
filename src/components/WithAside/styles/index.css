@@ -1,5 +1,7 @@
+/* eslint-disable */
 .container {
-  background-color: white;
+  background-color: var(--color-aside-bg);
+  color: var(--color-aside-font);
   overflow: hidden;
   position: relative;
 }
@@ -18,7 +20,7 @@
 }
 
 .aside {
-  background-color: white;
+  background-color: var(--color-aside-bg);
   bottom: 0;
   left: 100%;
   overflow: auto;
