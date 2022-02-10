@@ -26,6 +26,7 @@ import PromptDialog from 'components/dialogs/PromptDialog';
 
 import 'typeface-roboto';
 import styles from './styles/index.css';
+import '../../theme/styles/index.css';
 
 setLogEnabled(false);
 
@@ -97,18 +98,22 @@ class App extends Component {
     const firstTorrent = torrents_store.getByIds(selectedTorrents)[0] || {};
     const filteredTorrents = getFilteredTorrents(torrents_store, prefs_store);
 
+const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const theme = prefs_store.themeStyle;
+/*            <DrawerMenu />*/
     return (
       <DropzoneLayer>
-        <Layout styleName='layout'>
+        <Layout styleName='layout' data-theme={theme}>
           <NavDrawer
             active={this.state.showDrawer}
             onOverlayClick={this.onHideDrawer}
             styleName='nav_drawer'
+            theme={styles}
           >
             <DrawerMenu />
           </NavDrawer>
-          <Panel>
-            <div styleName='container' onClick={this.onToggleContextMenu}>
+          <Panel >
+            <div styleName='container' onClick={this.onToggleContextMenu} >
               <div style={{ overflow: 'hidden' }}>
                 <WithAside
                   aside={<Inspector />}
@@ -141,7 +146,7 @@ class App extends Component {
 
               <OpenDialog />
               <DeleteDialog />
-              <PreferencesDialog />
+              <PreferencesDialog data-theme={theme}/>
               <ConnectionDialog />
               <StatisticsDialog />
               <AboutDialog />
