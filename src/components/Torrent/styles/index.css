@@ -1,5 +1,6 @@
+/* eslint-disable */
 .torrent {
-  color: black;
+  color: var(--color-torrent-font);
   margin: 15px 25px;
   margin-left: 0px;
   display: flex;
