@@ -41,7 +41,7 @@
 }
 
 .nameCompact {
-  color: black;
+  color: var(--color-torrent-font);  
   flex: 1;
 }
 
