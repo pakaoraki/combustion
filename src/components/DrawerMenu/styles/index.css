@@ -60,7 +60,7 @@
 
 /* --- input --- */
 .drawer__search__label {
-  color: var(--color-nav-drawer-input-label-font);
+  color: var(--color-nav-drawer-label-font);
 }
 
 .drawer__search__input_element {
