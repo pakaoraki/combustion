@@ -32,13 +32,14 @@ class Dialog extends Component {
         title={
           <div className={styles.contentDialog} >
             <Button
-              icon={<Left className={styles.buttonIcon} />}
+              icon={<Left size='28' className={styles.buttonIcon} />}
               label=' '
               theme={{
                 button: styles.button
               }}
               onClick={this.props.onHide}
             />
+            {this.props.icon}{' '}
             {this.props.header}
           </div>
         }

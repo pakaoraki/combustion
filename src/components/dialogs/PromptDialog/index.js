@@ -63,6 +63,7 @@ class PromptDialog extends Component {
         show={this.props.toggle}
         onHide={this.onHide}
         header={this.props.header}
+        icon={this.props.icon}
         actions={actions}
         type='fullscreen'
       >

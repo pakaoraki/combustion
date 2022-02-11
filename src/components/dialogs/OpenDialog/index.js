@@ -7,6 +7,7 @@ import { size } from 'util/formatters';
 import Dialog from '../Dialog'
 import Checkbox from 'react-toolbox/lib/checkbox';
 import Input from 'react-toolbox/lib/input';
+import UploadIcon from 'react-icons/lib/md/file-upload';
 
 import TorrentUpload from 'stores/torrent-upload';
 
@@ -93,6 +94,7 @@ class OpenDialog extends Component {
         theme={styles}
         show={this.props.view_store.isOpenDialogShown}
         onHide={this.onHide}
+        icon={<UploadIcon size='28'/>}
         header='Upload Torrent Files'
         type='normal'
         actions={actions}

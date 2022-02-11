@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react';
 import autobind from 'autobind-decorator';
 
 import { Tab, Tabs } from 'react-toolbox/lib/tabs';
-
+import SettingsIcon from 'react-icons/lib/md/settings';
 import Dialog from '../Dialog'
 
 import TorrentsTabPanel from './TorrentsTabPanel'
@@ -79,6 +79,7 @@ class PreferencesDialog extends Component {
         theme={styles}
         show={this.props.view_store.isPreferencesDialogShown}
         onHide={this.onHide}
+        icon={<SettingsIcon size='28' />}
         header='Preferences'
         type='fullscreen'
       >

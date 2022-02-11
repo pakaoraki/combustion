@@ -6,6 +6,8 @@ import getFilteredTorrents from 'stores/util/getFilteredTorrents';
 import autobind from 'autobind-decorator';
 
 import { Layout, NavDrawer, Panel } from 'react-toolbox';
+import RenameIcon from 'react-icons/lib/md/edit';
+import LocationIcon from 'react-icons/lib/md/edit-location';
 
 import WithAside from 'components/WithAside';
 import Torrent from 'components/Torrent';
@@ -153,6 +155,7 @@ const theme = prefs_store.themeStyle;
 
               <PromptDialog
                 header='Set location'
+                icon={<LocationIcon size='28'/>}
                 action='Apply'
                 placeholder={firstTorrent.downloadDir}
                 question='Location'
@@ -163,6 +166,7 @@ const theme = prefs_store.themeStyle;
 
               <PromptDialog
                 header='Rename torrent'
+                icon={<RenameIcon size='28'/>}
                 action='Rename'
                 question='Enter new name'
                 placeholder={firstTorrent.name}
