@@ -71,6 +71,7 @@
 
   /* Aside */
   --color-aside-bg: white;
+  --color-aside-border: #bdbdbd;
   --color-aside-font: black;
 }
 
@@ -155,5 +156,6 @@
 
   /* Aside */
   --color-aside-bg: #414564;
+  --color-aside-border: #242430;
   --color-aside-font: white;
 }
