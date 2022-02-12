@@ -65,7 +65,7 @@ class PromptDialog extends Component {
         header={this.props.header}
         icon={this.props.icon}
         actions={actions}
-        type='fullscreen'
+        type='normal'
       >
         <div styleName='body'>
           <div styleName='content'>
