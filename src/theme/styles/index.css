@@ -1,4 +1,81 @@
 /* eslint-disable */
+:root {
+  /* App */
+  --color-central: white;
+
+  /* Footer */
+  --color-footer-bg: #E0E0E0;
+  --color-footer-search-bg: white;
+  --color-footer-font: black;
+  --color-footer-hover: white;
+
+  /* Header */
+  --color-header-bg: black;
+  --color-header-bg--accent: #4E342E;
+
+  /* Inspector */
+  --color-inspector-pointer: black;
+  --color-inspector-tab: black;
+  --color-inspector-tab-active: black;
+  --color-inspector-peer-bg: #EEEEEE;
+  --color-inspector-row: #EEEEEE;
+  --color-inspector-row-alt: white;
+  --color-inspector-tracker-font: #666;
+  --color-inspector-tracker-fontUrl: #222;
+  --color-inspector-button: black;
+  --color-inspector-icon: black;
+
+  /* SelectableList */
+  --color-selectable-main: black;
+  --color-selectable-bg: white;
+  --color-selectable-select: #E0E0E0;
+  --color-selectable-border: #cecece;
+
+  /* DrawerMenu */
+  --color-drawer-bg: white;
+  --color-drawer-footer: #e0e0e0;
+  --color-drawer-font: black;
+  --color-drawer-font2: #56144D;
+  --color-drawer-icon: #757575;
+
+  /* Dialogs */
+  --color-dialog-bg: white;
+  --color-dialog-font: black;
+
+  /* NavDrawer */
+  --color-nav-drawer-label-font: #b9b9b9;
+  --color-nav-drawer-title-font: black;
+  --color-nav-drawer-title-item-font: black;
+  --color-nav-drawer-font: black;
+  --color-nav-drawer-input-disable-font: black;
+  --color-nav-drawer-input-bar: black;
+  --color-nav-drawer-dropdown-select-bg: #e0e0e0;
+  --color-nav-drawer-dropdown-values-bg: white;
+  --color-nav-drawer-hover-bg: #eeeeee;
+  --color-nav-drawer-icon: #757575;
+
+  /* Menu */
+  --color-menu-font: black;
+  --color-menu-bg: white;
+  --color-menu-hover-bg: #eeeeee;
+  --color-menu-ripple: black;
+
+  /* Input (Footer -> search)*/
+  --color-input-label: #bdbdbd;
+  --color-input-cross: #BFBFBF;
+  --color-input-icon: #bdbdbd;
+  --color-input-focus: black;
+  --color-input-value: black;
+
+  /* Torrent */
+  --color-torrent-bg: #EEEEEE;
+
+  /* Aside */
+  --color-aside-bg: white;
+  --color-aside-border: #bdbdbd;
+  --color-aside-font: black;
+}
+
 [data-theme='light'] {
   /* App */
   --color-central: white;
