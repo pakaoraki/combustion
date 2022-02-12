@@ -36,6 +36,7 @@
   --color-drawer-footer: #e0e0e0;
   --color-drawer-font: black;
   --color-drawer-font2: #56144D;
+  --color-drawer-icon: #757575;
 
   /* Dialogs */
   --color-dialog-bg: white;
@@ -121,6 +122,7 @@
   --color-drawer-footer: #414564;
   --color-drawer-font: white;
   --color-drawer-font2: #A9AABC;
+  --color-drawer-icon: #A9AABC;
 
   /* Dialogs */
   --color-dialog-bg: #363746;

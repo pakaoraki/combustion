@@ -45,7 +45,7 @@
   margin-right: 0.2rem;
   font-size: 1.8rem;
   cursor: pointer;
-  color: white;
+  color: var(--color-drawer-icon);
 }
 
 .sortBy__button:hover {
