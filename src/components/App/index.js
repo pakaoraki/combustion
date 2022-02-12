@@ -100,14 +100,12 @@ class App extends Component {
     const firstTorrent = torrents_store.getByIds(selectedTorrents)[0] || {};
     const filteredTorrents = getFilteredTorrents(torrents_store, prefs_store);
 
-const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     /* Detect system light/dark theme in auto mode */
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
     const theme = (prefs_store.themeStyle === 'auto'
              ? (darkThemeMq.matches ? 'dark' : 'light')
              : prefs_store.themeStyle );
 
-/*            <DrawerMenu />*/
     return (
       <DropzoneLayer>
         <Layout styleName='layout' data-theme={theme}>

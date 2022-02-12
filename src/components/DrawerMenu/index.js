@@ -4,16 +4,15 @@ import { inject } from 'mobx-react';
 import autobind from 'autobind-decorator';
 
 import Input from 'react-toolbox/lib/input';
-import { IconButton, Button } from 'react-toolbox/lib/button';
+import { IconButton } from 'react-toolbox/lib/button';
 import Dropdown from 'react-toolbox/lib/dropdown';
-import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
+import { ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
 import SettingsIcon from 'react-icons/lib/md/settings';
 import FilterToolbar from 'components/toolbars/FilterToolbar';
 import { sortCriteria } from 'stores/torrent-store';
 
 import SortDirUp from 'react-icons/lib/io/android-arrow-dropup-circle';
 import SortDirDown from 'react-icons/lib/md/arrow-drop-down-circle';
-import PlayIcon from 'react-icons/lib/md/play-circle-outline';
 
 import styles from './styles/index.css';
 
@@ -55,7 +54,6 @@ class DrawerMenu extends Component {
     this.props.torrents_store.setTrackerFilter(value);
   }
 
-/* theme={{ inputInput: styles.list_item }} */
   render() {
     const search = this.props.torrents_store.textFilter;
     const currCriteria = this.props.prefs_store.sortCriteria;
@@ -78,8 +76,7 @@ class DrawerMenu extends Component {
       disable: styles.drawer__search__input_disable
     }
 
-    const direction = this.props.prefs_store.sortDirection;
-    const sortByDirBtn = (direction === 'ascending'
+    const sortByDirBtn = (currDir === 'ascending'
           ? <SortDirUp />
           : <SortDirDown />);
 
