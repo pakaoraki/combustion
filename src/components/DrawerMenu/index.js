@@ -4,11 +4,16 @@ import { inject } from 'mobx-react';
 import autobind from 'autobind-decorator';
 
 import Input from 'react-toolbox/lib/input';
+import { IconButton, Button } from 'react-toolbox/lib/button';
 import Dropdown from 'react-toolbox/lib/dropdown';
 import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
 import SettingsIcon from 'react-icons/lib/md/settings';
 import FilterToolbar from 'components/toolbars/FilterToolbar';
 import { sortCriteria } from 'stores/torrent-store';
+
+import SortDirUp from 'react-icons/lib/io/android-arrow-dropup-circle';
+import SortDirDown from 'react-icons/lib/md/arrow-drop-down-circle';
+import PlayIcon from 'react-icons/lib/md/play-circle-outline';
 
 import styles from './styles/index.css';
 
@@ -21,6 +26,11 @@ class DrawerMenu extends Component {
 
   @autobind onChangeSort(value) {
     this.props.prefs_store.setSortCriteria(value);
+  }
+
+  @autobind onChangeSortDir2() {
+    var value = this.props.prefs_store.sortDirection;
+    this.props.prefs_store.setSortDirection(value==='ascending'?'descending':'ascending');
   }
 
   @autobind onChangeSortDir(value) {
@@ -68,9 +78,14 @@ class DrawerMenu extends Component {
       disable: styles.drawer__search__input_disable
     }
 
+    const direction = this.props.prefs_store.sortDirection;
+    const sortByDirBtn = (direction === 'ascending'
+          ? <SortDirUp />
+          : <SortDirDown />);
+
     return (
       <aside styleName='drawer'>
-        <List styleName='aside' selectable ripple>
+        <div styleName='aside'>
           <Input
             type='text'
             label='Search'
@@ -80,24 +95,24 @@ class DrawerMenu extends Component {
             onChange={this.onChangeSearch}
             theme={themesInput}
           />
-          <Dropdown
-            auto
-            label='SORT BY'
-            source={sortCriteria}
-            value={currCriteria}
-            onChange={this.onChangeSort}
-            theme={styles}
-            className={styles.mdropdown}
-          />
-          <Dropdown
-            auto
-            label='SORT DIRECTION'
-            source={[{value: 'ascending', label: 'Ascending'}, {value: 'descending', label: 'Descending'}]}
-            value={currDir}
-            onChange={this.onChangeSortDir}
-            theme={styles}
-            className={styles.mdropdown}
-          />
+          <div styleName='sortBy__parent'>
+            <div styleName='sortBy__dropdown'>
+              <Dropdown
+                auto
+                label='SORT BY'
+                source={sortCriteria}
+                value={currCriteria}
+                onChange={this.onChangeSort}
+                theme={styles}
+                className={styles.mdropdown}
+              />
+            </div>
+            <div styleName='sortBy__btnIcon'>
+             <IconButton styleName='sortBy__button' onClick={this.onChangeSortDir2}>
+                {sortByDirBtn}
+              </IconButton>
+            </div>
+          </div>
           <ListSubHeader
             caption='Filter by Status'
             theme={styles}
@@ -137,8 +152,10 @@ class DrawerMenu extends Component {
             onClick={this.onTogglePreferences}
             theme={styles}
             className={styles.settings}
+            selectable
+            ripple
           />
-        </List>
+        </div>
         <footer styleName='footer'>
           <span>Combustion © 2017</span>
           <span>by <a href='https://arianv.com/'>Secretmapper</a></span>

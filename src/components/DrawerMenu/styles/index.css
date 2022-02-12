@@ -17,6 +17,46 @@
   padding-right: 16px;
 }*/
 
+/* -- Sort By Direction --- */
+.sortBy__parent {
+  width: 100%;
+
+}
+.sortBy__dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 80%;
+}
+.sortBy__btnIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 20%;
+
+}
+
+.sortBy__button {
+  width: auto;
+}
+
+.sortBy__button>svg {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+.sortBy__button:hover {
+  cursor: pointer;
+}
+
+.sortBy__button:disabled {
+  opacity: 0.25;
+}
+/* ------------------------ */
+
 .footer {
   background-color: var(--color-drawer-bg);
   padding: 15px;
