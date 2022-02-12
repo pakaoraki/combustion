@@ -19,7 +19,10 @@ new css var in ./styles/index.css.  */
 @CSSModules(styles)
 class Dialog extends Component {
   render() {
-    const theme = this.props.prefs_store.themeStyle;
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    const theme = (this.props.prefs_store.themeStyle === 'auto'
+             ? (darkThemeMq.matches ? 'dark' : 'light')
+             : this.props.prefs_store.themeStyle );
 
     return (
       <MDialog

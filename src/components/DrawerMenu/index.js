@@ -138,6 +138,7 @@ class DrawerMenu extends Component {
             auto
             label='THEME'
             source={[
+              {value: 'auto', label: 'Auto'},
               {value: 'light', label: 'Light'},
               {value: 'dark', label: 'Dark'}
             ]}
