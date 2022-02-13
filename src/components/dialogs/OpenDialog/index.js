@@ -76,9 +76,10 @@ class OpenDialog extends Component {
 
 
   render() {
+    const btnColor = 'var(--dialog-font)';
     const actions = [
-      { label: 'Cancel', onClick: this.onCancel },
-      { label: 'Upload', onClick: this.onUpload }
+      { label: 'Cancel', onClick: this.onCancel, style: { color: btnColor } },
+      { label: 'Upload', onClick: this.onUpload, style: { color: btnColor } }
     ]
 
     const themesInput = {
