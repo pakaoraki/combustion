@@ -41,12 +41,12 @@ class PromptDialog extends Component {
   }
 
   render() {
+    const btnColor = 'var(--dialog-font)';
     let actions = [
-      { label: 'Cancel', onClick: this.onHide, className: "snm-close-dialog" },
+      { label: 'Cancel', onClick: this.onHide, style: { color: btnColor } },
       { label: this.props.action || 'Ok',
          onClick: this.onSubmit,
-         className: 'test',
-         primary: true
+         style: { color: btnColor }
       }
     ];
 
