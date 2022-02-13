@@ -19,6 +19,11 @@ import ActionToolbar from 'components/toolbars/ActionToolbar';
 class Header extends Component {
   @autobind onSelectBack() {
     this.deselectAllTorrents()
+
+    /* Close inspector if no torrent selected */
+    if (this.props.view_store.isInspectorShown){
+      this.props.view_store.toggleInspector();
+    }
   }
 
   @autobind deselectAllTorrents() {
