@@ -37,8 +37,18 @@ class TorrentsTabPanel extends Component {
         <CheckRow id='rename-partial-files' label='Append ".part" to incomplete files'/>
 
         <h3>Seeding</h3>
-        <CheckValueRow idCheck='seedRatioLimited' idValue='seedRatioLimit' label='Stop seeding at ratio'/>
-        <CheckValueRow idCheck='idle-seeding-limit-enabled' idValue='idle-seeding-limit' label='Stop seeding if idle for (min)'/>
+        <CheckValueRow
+          theme={this.props.theme}
+          idCheck='seedRatioLimited'
+          idValue='seedRatioLimit'
+          label='Stop seeding at ratio'
+        />
+        <CheckValueRow
+          theme={this.props.theme}
+          idCheck='idle-seeding-limit-enabled'
+          idValue='idle-seeding-limit'
+          label='Stop seeding if idle for (min)'
+        />
         <Input
           theme={this.props.theme}
           label='RPC endpoint'
