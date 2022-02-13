@@ -86,7 +86,7 @@ class ActionToolbar extends Component {
             </IconButton>
           </div>
         }
-        <IconButton styleName='button' title='Toggle inspector' onClick={this.onToggleInspector} >
+        <IconButton styleName='button' disabled={!isAnySelected} title='Toggle inspector' onClick={this.onToggleInspector} >
           <InfoIcon />
         </IconButton>
       </div>
