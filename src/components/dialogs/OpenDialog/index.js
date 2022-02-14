@@ -110,6 +110,7 @@ class OpenDialog extends Component {
                      name="files"
                      type="file"
                      multiple="multiple"
+                     accept=".torrent"
                      onChange={this.onChangeFiles}
                   />
                 </fieldset>
