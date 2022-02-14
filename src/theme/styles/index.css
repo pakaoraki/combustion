@@ -12,6 +12,7 @@
   /* Header */
   --color-header-bg: black;
   --color-header-bg--accent: #4E342E;
+  --color-header-border: black;
 
   /* Inspector */
   --color-inspector-pointer: black;
@@ -34,7 +35,7 @@
   /* DrawerMenu */
   --color-drawer-bg: white;
   --color-drawer-footer: #e0e0e0;
-  --color-drawer-font: black;
+  --color-drawer-font: #444548; /* black */
   --color-drawer-font2: #56144D;
   --color-drawer-icon: #757575;
 
@@ -43,9 +44,9 @@
 
   /* NavDrawer */
   --color-nav-drawer-label-font: #b9b9b9;
-  --color-nav-drawer-title-font: black;
-  --color-nav-drawer-title-item-font: black;
-  --color-nav-drawer-font: black;
+  --color-nav-drawer-title-font: #444548; /* black */
+  --color-nav-drawer-title-item-font: #444548; /* black */
+  --color-nav-drawer-font: #444548; /* black */
   --color-nav-drawer-input-disable-font: black;
   --color-nav-drawer-input-bar: black;
   --color-nav-drawer-dropdown-select-bg: #e0e0e0;
@@ -88,6 +89,7 @@
   /* Header */
   --color-header-bg: black;
   --color-header-bg--accent: #4E342E;
+  --color-header-border: black;
 
   /* Inspector */
   --color-inspector-pointer: black;
@@ -110,7 +112,7 @@
   /* DrawerMenu */
   --color-drawer-bg: white;
   --color-drawer-footer: #e0e0e0;
-  --color-drawer-font: black;
+  --color-drawer-font: #444548; /* black */
   --color-drawer-font2: #56144D;
   --color-drawer-icon: #757575;
 
@@ -119,9 +121,9 @@
 
   /* NavDrawer */
   --color-nav-drawer-label-font: #b9b9b9;
-  --color-nav-drawer-title-font: black;
-  --color-nav-drawer-title-item-font: black;
-  --color-nav-drawer-font: black;
+  --color-nav-drawer-title-font: #444548; /* black */
+  --color-nav-drawer-title-item-font: #444548; /* black */
+  --color-nav-drawer-font: #444548; /* black */
   --color-nav-drawer-input-disable-font: black;
   --color-nav-drawer-input-bar: black;
   --color-nav-drawer-dropdown-select-bg: #e0e0e0;
@@ -173,6 +175,7 @@
   /* Header */
   --color-header-bg: black; /* previous #242430 */
   --color-header-bg--accent: #242430;
+  --color-header-border: #414564;
 
   /* Inspector */
   --color-inspector-pointer: #242430; /* previous #414564 */
