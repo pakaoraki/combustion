@@ -47,11 +47,13 @@
 .nav_drawer {
   display: flex;
   flex: 1;
+  border-right-color: var(--color-app-nav-drawer-border) !important;
 }
 
 .sidebarDrawer,
 .navDrawerDrawer {
   background-color: var(--color-central);
+  width: 16rem;
 }
 /* -------------------*/
 
@@ -64,12 +66,4 @@
   flex: 1;
   overflow-y: auto;
   border-left: 1px solid #888;
-}
-
-/* test */
-
-.sidebarDrawer {
-  color: green;
-  background-color: green;
-  width: 50px;
 }

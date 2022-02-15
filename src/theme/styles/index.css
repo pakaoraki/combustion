@@ -2,6 +2,7 @@
 :root {
   /* App */
   --color-central: white;
+  --color-app-nav-drawer-border: #e0e0e0;
 
   /* Footer */
   --color-footer-bg: #E0E0E0;
@@ -80,6 +81,7 @@
 [data-theme='light'] {
   /* App */
   --color-central: white;
+  --color-app-nav-drawer-border: #e0e0e0;
 
   /* Footer */
   --color-footer-bg: #E0E0E0;
@@ -167,6 +169,7 @@
   */
   /* App */
   --color-central: #363746;
+  --color-app-nav-drawer-border: #414564;
 
   /* Footer */
   --color-footer-bg: #242430;
