@@ -48,6 +48,10 @@ div.inspectorCloseButton {
 
 .label {
   color: var(--color-inspector-tab);
+
+  &:focus {
+    background-color: transparent;
+  }
 }
 
 .label.active, .icon.active {

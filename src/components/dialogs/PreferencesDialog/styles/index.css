@@ -23,6 +23,10 @@
 
 .label {
   color: var(--dialog-label-font);
+
+  &:focus {
+    background-color: transparent;
+  }
 }
 
 .label.active {
