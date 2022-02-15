@@ -33,11 +33,11 @@ export default class MoveOptions extends React.Component {
 
   render () {
     return (
-      <IconMenu icon={<SwapVert />} position='auto' menuRipple styleName='rightOptions'>
-        <MenuItem caption='Move to Top' onClick={this.queueMoveTop} />
-        <MenuItem caption='Move Up' onClick={this.queueMoveUp} />
-        <MenuItem caption='Move Down' onClick={this.queueMoveDown} />
-        <MenuItem caption='Move to Bottom' onClick={this.queueMoveBottom} />
+      <IconMenu theme={styles} icon={<SwapVert />} position='auto' menuRipple styleName='rightOptions'>
+        <MenuItem theme={styles} caption='Move to Top' onClick={this.queueMoveTop} />
+        <MenuItem theme={styles} caption='Move Up' onClick={this.queueMoveUp} />
+        <MenuItem theme={styles} caption='Move Down' onClick={this.queueMoveDown} />
+        <MenuItem theme={styles} caption='Move to Bottom' onClick={this.queueMoveBottom} />
       </IconMenu>
     );
   }
