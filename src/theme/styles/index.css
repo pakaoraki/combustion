@@ -53,6 +53,7 @@
   --color-nav-drawer-dropdown-values-bg: white;
   --color-nav-drawer-hover-bg: #eeeeee;
   --color-nav-drawer-icon: #757575;
+  --color-nav-drawer-element-disable: #e0e0e0;
 
   /* Menu */
   --color-menu-font: black;
@@ -130,6 +131,7 @@
   --color-nav-drawer-dropdown-values-bg: white;
   --color-nav-drawer-hover-bg: #eeeeee;
   --color-nav-drawer-icon: #757575;
+  --color-nav-drawer-element-disable: #e0e0e0;
 
   /* Menu */
   --color-menu-font: black;
@@ -216,6 +218,7 @@
   --color-nav-drawer-dropdown-values-bg: #414564;
   --color-nav-drawer-hover-bg: #757890; /*414564*/
   --color-nav-drawer-icon: #a9aabc;
+  --color-nav-drawer-element-disable: #2f303d;
 
   /* Menu */
   --color-menu-font: #D4D5DE;

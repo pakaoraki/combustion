@@ -41,6 +41,11 @@
 .value {
   & > input {
     color: var(--dialog-font);
+    border-bottom-color: var(--dialog-element);
+  }
+
+  &::after {
+    border-top-color: var(--dialog-element);
   }
 }
 /*---------------------*/

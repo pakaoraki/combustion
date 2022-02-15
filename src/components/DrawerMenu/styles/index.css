@@ -5,6 +5,7 @@
   flex: 1;
   color: var(--color-drawer-font);
   background-color: var(--color-drawer-bg);
+
 }
 
 .aside {
@@ -82,6 +83,10 @@
       background-color: var(--color-nav-drawer-hover-bg);
     }
   }
+
+  & .ripple {
+    color: var(--color-menu-ripple);
+  }
 }
 
 .icon {
@@ -105,6 +110,7 @@
 
 .drawer__search__input_element {
   color: var(--color-nav-drawer-input-font);
+  border-bottom: 1px solid var(--color-nav-drawer-element-disable);
 
   &:focus:not([disabled]):not([readonly]) {
 
@@ -141,11 +147,20 @@
   padding-right: 16px;
 
   &>div {
-
     &>label {
       color: var(--color-nav-drawer-label-font);
     }
+  }
+}
 
+.value {
+  & > input {
+    color: var(--color-nav-drawer-font);
+    border-bottom-color: var(--color-nav-drawer-element-disable);
+  }
+
+  &::after {
+    border-top-color: var(--color-nav-drawer-element-disable);
   }
 }
 
@@ -162,13 +177,6 @@
       background-color: var(--color-nav-drawer-dropdown-select-bg);
       color: var(--color-nav-drawer-font);
     }
-  }
-}
-
-.value {
-  & > input {
-    color: var(--color-nav-drawer-font);
-
   }
 }
 /*---------------------*/

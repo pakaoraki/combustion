@@ -17,6 +17,7 @@
   --dialog-switch-on-thumb: black;
   --dialog-switch-off-thumb: white;
   --dialog-button-bg: black;
+  --dialog-element: #e0e0e0;
 
   /* Input (Footer -> search)*/
   --input-text-disable-text-color: #bdbdbd;
@@ -45,6 +46,7 @@
   --dialog-switch-on-thumb: #D4D5DE;
   --dialog-switch-off-thumb: #414564;
   --dialog-button-bg: #242430;
+  --dialog-element: #2f303d;
 
   /* Input (Footer -> search)*/
   --input-text-disable-text-color: #242430;
@@ -117,6 +119,7 @@ div[data-react-toolbox=dialog] > section{
 
 .dialog__input_element {
   color: var(--input-value);
+  border-bottom: 1px solid var(--dialog-element);
 
   &:focus:not([disabled]):not([readonly]) {
 
