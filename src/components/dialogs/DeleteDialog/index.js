@@ -3,7 +3,8 @@ import CSSModules from 'react-css-modules';
 import { inject, observer } from 'mobx-react';
 import autobind from 'autobind-decorator';
 
-import Dialog from 'react-toolbox/lib/dialog'
+import DeleteIcon from 'react-icons/lib/md/delete-forever';
+import Dialog from '../Dialog'
 
 import styles from './styles/index.css';
 
@@ -30,19 +31,28 @@ class DeleteDialog extends Component {
   }
 
   render() {
+    const btnColor = 'var(--dialog-font)';
+    const btnPrimaryColor = 'var(--dialog-button-bg)';
     const actions = [
-      { label: 'Cancel', onClick: this.onHide },
+      { label: 'Cancel', onClick: this.onHide, style: { color: btnColor } },
       { label: 'Delete w/ Data', onClick: this.onDeleteWithData, accent: true },
-      { label: 'Delete', onClick: this.onDelete, primary: true, raised: true }
+      {
+        label: 'Delete',
+        onClick: this.onDelete,
+        primary: true,
+        raised: true,
+        style: { backgroundColor: btnPrimaryColor }
+      }
     ]
 
     return (
       <Dialog
         actions={actions}
-        active={this.props.view_store.isDeleteDialogShown}
-        onEscKeyDown={this.onHide}
-        onOverlayClick={this.onHide}
-        title='Delete Torrent'
+        show={this.props.view_store.isDeleteDialogShown}
+        onHide={this.onHide}
+        icon={<DeleteIcon size='28' />}
+        header='Delete Torrent'
+        type='normal'
       >
         <div styleName='body'>
           Once removed, continuing the transfer will require the torrent file. Are you sure you want to remove it?
