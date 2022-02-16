@@ -1,12 +1,13 @@
 {
-  "name": "react-transmission",
-  "version": "0.6.5",
+  "name": "react-combustion",
+  "version": "0.7.0",
   "private": true,
   "contributors": [
     "Ferran Basora <fcsonline@gmail.com>",
     "Eduardo Lanchares <eduardo@elanchares.com>",
     "Sebastian Boolean",
-    "Secretmapper"
+    "Secretmapper",
+    "Pakaoraki"
   ],
   "devDependencies": {
     "autoprefixer": "6.5.1",
