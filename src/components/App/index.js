@@ -7,7 +7,7 @@ import autobind from 'autobind-decorator';
 
 import { Layout, NavDrawer, Panel } from 'react-toolbox';
 import RenameIcon from 'react-icons/lib/md/edit';
-import LocationIcon from 'react-icons/lib/md/edit-location';
+import LocationIcon from 'react-icons/lib/md/folder';
 
 import WithAside from 'components/WithAside';
 import Torrent from 'components/Torrent';
