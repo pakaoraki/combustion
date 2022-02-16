@@ -6,7 +6,7 @@ import autobind from 'autobind-decorator';
 import Input from 'react-toolbox/lib/input';
 import { IconButton } from 'react-toolbox/lib/button';
 import Dropdown from 'react-toolbox/lib/dropdown';
-import { ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
+import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
 import SettingsIcon from 'react-icons/lib/md/settings';
 import FilterToolbar from 'components/toolbars/FilterToolbar';
 import { sortCriteria } from 'stores/torrent-store';
@@ -144,15 +144,18 @@ class DrawerMenu extends Component {
             theme={styles}
             className={styles.mdropdown}
           />
-          <ListItem
-            caption='Settings'
-            leftIcon={<SettingsIcon className={styles.icon}/>}
-            onClick={this.onTogglePreferences}
-            theme={styles}
-            className={styles.settings}
-            selectable
-            ripple
-          />
+          <ListDivider theme={styles} />
+          <List >
+            <ListItem
+              caption='Settings'
+              leftIcon={<SettingsIcon className={styles.icon}/>}
+              onClick={this.onTogglePreferences}
+              theme={styles}
+              className={styles.settings}
+              selectable
+              ripple
+            />
+          </List>
         </div>
         <footer styleName='footer'>
           <span>Combustion © 2017</span>
