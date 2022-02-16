@@ -158,8 +158,9 @@ class DrawerMenu extends Component {
           </List>
         </div>
         <footer styleName='footer'>
-          <span>Combustion © 2017</span>
-          <span>by <a href='https://arianv.com/'>Secretmapper</a></span>
+          <span>Combustion © 2022</span>
+          <span>Updated by <a href='https://github.com/pakaoraki/combustion'>Pakaoraki</a></span>
+          <span>Created by <a href='https://arianv.com/'>Secretmapper</a></span>
         </footer>
       </aside>
     )
